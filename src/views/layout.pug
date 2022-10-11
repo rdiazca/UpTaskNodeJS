@@ -21,12 +21,10 @@ html(lang="en")
                 .panel.lista-proyectos  
                     h2 Projects
                     ul#proyectos.proyectos 
-                        li 
-                            a(href="#") Design of Virtual Shop
-                        li 
-                            a(href="#") Design of New Blog
-                        li 
-                            a(href="#") Design of Logo
+                        if(projects.length)
+                            each project in projects
+                                li 
+                                    a(href='#')= project.name
 
             block content
 
